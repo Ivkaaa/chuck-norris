@@ -31,6 +31,8 @@ function showJoke(joke){
     let jokeText = document.querySelector('.joke');
     jokeText.innerHTML = '';
 
+    jokeText.style.backgroundColor  = '#f9f9f9';
+    jokeText.style.borderLeft = '10px solid #ccc';
     jokeText.innerText = joke.value;
 }
 
