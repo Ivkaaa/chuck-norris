@@ -8,8 +8,6 @@ function fetchJoke(e){
 
     request.open('GET', 'https://api.chucknorris.io/jokes/random');
 
-    request.send()
-
     request.onload = function(){
 
         if(request.status >= 200 && request.status < 400){
@@ -20,6 +18,8 @@ function fetchJoke(e){
             jokeError()
         }
     }
+
+    request.send()
 
 
     e.preventDefault()
