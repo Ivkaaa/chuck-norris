@@ -3,23 +3,23 @@ document.getElementById('btn').addEventListener('click', fetchJoke);
 
 function fetchJoke(e){
     //console.log('test')
-    const request = new XMLHttpRequest();
+    const xhr = new XMLHttpRequest();
 
 
-    request.open('GET', 'https://api.chucknorris.io/jokes/random');
+    xhr.open('GET', 'https://api.chucknorris.io/jokes/random', true);
 
-    request.onload = function(){
+    xhr.onload = function(){
 
-        if(request.status >= 200 && request.status < 400){
-            //console.log(JSON.parse(request.responseText))
-            showJoke(JSON.parse(request.responseText))
+        if(xhr.status === 200) {
+            //console.log(JSON.parse(xhr.responseText))
+            showJoke(JSON.parse(xhr.responseText))
 
         }else{
             jokeError()
         }
-    }
+    };
 
-    request.send()
+    xhr.send();
 
 
     e.preventDefault()
