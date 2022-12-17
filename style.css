@@ -66,4 +66,14 @@ footer{
     .main-img{
         width: 355px;
     }
+    
+}
+
+@media screen and (max-width: 750px) {
+    .main, footer{
+        padding: 0 20px;
+    }
+    .footer-text{
+        width: 100%;
+    }
 }
